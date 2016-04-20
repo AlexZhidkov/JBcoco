@@ -1,0 +1,12 @@
+<section layout="column" layout-align="center center" layout-wrap>
+    <h1>Sign in</h1>
+
+    <md-button class="md-raised" ng-click="signInWithProvider('google')" type="button">
+        Google
+    </md-button>
+    <md-button class="md-raised" ng-click="signInWithProvider('facebook')" type="button">
+        Facebook
+    </md-button>
+
+    <p ng-show="err" class="error">{{err}}</p>
+</section>

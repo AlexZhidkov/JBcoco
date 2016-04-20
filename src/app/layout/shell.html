@@ -1,0 +1,43 @@
+<section layout-fill ng-controller="Shell as vm" layout="row" ng-controller="Shell as vm" flex ng-cloak>
+    <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-2dp flex-width" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+        <md-toolbar class="md-theme-indigo">
+        </md-toolbar>
+        <md-content layout="column" layout-align="start">
+            <p show-gt-md>
+                <md-list>
+                    <md-list-item md-ink-ripple>
+                        <i class="material-icons">event_note</i>
+                        <a class="menu-item" href="#/submitForm" ng-click="vm.toggleLeft()">Submit Form</a>
+                    </md-list-item >
+                    <md-list-item md-ink-ripple>
+                        <i class="material-icons">list</i>
+                        <a class="menu-item" href="#/" ng-click="vm.toggleLeft()">Find trainer</a>
+                    </md-list-item>
+                    <md-list-item md-ink-ripple>
+                        <i class="material-icons">group</i>
+                        <a class="menu-item" href="#/" ng-click="vm.toggleLeft()">Schedule course</a>
+                    </md-list-item>
+                    <md-list-item md-ink-ripple>
+                        <i class="material-icons">directions_run</i>
+                        <a class="menu-item" href="" ng-click="vm.signOut()">Sign Out</a>
+                    </md-list-item>
+                </md-list>
+            </p>
+        </md-content>
+    </md-sidenav>
+    <md-content layout="column" flex layout-padding>
+        <md-toolbar class="md-theme-indigo">
+            <div class="md-toolbar-tools">
+                <md-button ng-click="vm.toggleLeft()" class="md-icon-button md-primary" hide-gt-md aria-label="Menu">
+                    <i class="material-icons">menu</i>
+                </md-button>
+                <h1 class="md-flex">{{vm.title}}</h1>
+            </div>
+        </md-toolbar>
+
+        <div layout="column" layout-fill layout-align="top center">
+            <div ng-view></div>
+        </div>
+        <div flex></div>
+    </md-content>
+</section>
