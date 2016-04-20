@@ -1,1 +1,2 @@
-# JBcoco
+[![Build Status](https://travis-ci.org/AlexZhidkov/JBcoco.svg?branch=master)](https://travis-ci.org/AlexZhidkov/JBcoco)
+# JBcoco 
