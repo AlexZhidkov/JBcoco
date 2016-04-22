@@ -31,7 +31,7 @@ us manage and test the application.
 * We get the tools we depend upon via `npm`, the [node package manager][npm].
 * We get the angular code via `bower`, a [client-side code package manager][bower].
 
-We have preconfigured `npm` to automatically run `bower` so we can simply do:
+We have preconfigured `npm` to automatically run `bower` so we can simply run [b]in the project folder[/b]:
 
 ```
 npm install
