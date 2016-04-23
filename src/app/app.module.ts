@@ -25,6 +25,7 @@
         'app.account',
         'app.layout',
         'app.login',
+        'app.candidates',
         'app.submitForm'
     ])
 
