@@ -7,25 +7,55 @@
         <div>
             <form name="submitForm">
                 <md-input-container class="md-block">
-                    <label>Name</label>
-                    <input ng-model="vm.name">
+                    <label>First Name</label>
+                    <input ng-model="vm.firstname">
                 </md-input-container>
                 <md-input-container class="md-block">
-                    <label>Email</label>
-                    <input ng-model="vm.email">
+                    <label>Middle Name</label>
+                    <input ng-model="vm.middlename">
                 </md-input-container>
                 <md-input-container class="md-block">
-                    <label>Phone</label>
-                    <input ng-model="vm.phone">
+                    <label>Last Name</label>
+                    <input ng-model="vm.lastname">
+                </md-input-container>
+                <md-datepicker ng-model="vm.dateofbirth" md-placeholder="Date of Birth">
+                </md-datepicker>
+                <md-input-container class="md-block">
+                    <label>Place of Birth</label>
+                    <input ng-model="vm.placeofbirth">
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Country of Birth</label>
+                    <input ng-model="vm.countryofbirthh">
                 </md-input-container>
                 <md-input-container class="md-block">
                     <label>Address</label>
                     <input ng-model="vm.address">
                 </md-input-container>
                 <md-input-container class="md-block">
-                    <label>Message</label>
-                    <textarea ng-model="vm.message" rows="5" md-select-on-focus></textarea>
+                    <label>Daytime Telephone Number</label>
+                    <input ng-model="vm.dayno">
                 </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Mobile Telephone Number</label>
+                    <input ng-model="vm.mobileno">
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>E-mail Address</label>
+                    <input ng-model="vm.email" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Job Title</label>
+                    <input ng-model="vm.job">
+                </md-input-container>
+                <md-input-container>
+                    <label>Password</label>
+                    <input name="password" reauired type="password" ng-model="vm.password">
+               </md-input-container>
+               <md-input-container>
+                    <label>Repeat Password</label>
+                    <input name="rpassword" reauired type="password" ng-model="vm.rpassword">
+               </md-input-container>
                 <section>
                     <md-button class="md-raised md-primary" ng-click="vm.submit()">Submit</md-button>
                 </section>
