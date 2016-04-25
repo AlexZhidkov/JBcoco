@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
 
     angular
@@ -8,7 +8,7 @@
     /**
      * @ngInject
      */
-    function Shell($scope, $timeout, $mdSidenav, config, logger, fbutil, $location, loginRedirectPath) {
+    function Shell($rootScope, $scope, $timeout, $mdSidenav, config, logger, fbutil, $location, loginRedirectPath) {
         /*jshint validthis: true */
         var vm = this;
         vm.title = config.appTitle;
@@ -23,6 +23,7 @@
         function signOut() {
             buildDelayedToggler('left');
             fbutil.ref().unauth();
+            $rootScope.profile = null;
             $location.path(loginRedirectPath);
         }
 
@@ -36,7 +37,7 @@
                 var context = $scope,
                     args = Array.prototype.slice.call(arguments);
                 $timeout.cancel(timer);
-                timer = $timeout(function() {
+                timer = $timeout(function () {
                     timer = undefined;
                     func.apply(context, args);
                 }, wait || 10);
@@ -48,7 +49,7 @@
          * report completion in console
          */
         function buildDelayedToggler(navID) {
-            return debounce(function() {
+            return debounce(function () {
                 $mdSidenav(navID)
                     .toggle();
             }, 200);
