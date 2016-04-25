@@ -26,22 +26,27 @@
         'app.layout',
         'app.login',
         'app.candidates',
+        'app.submitFormGeneralInformation',
         'app.submitForm'
     ])
 
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider.otherwise({
-                redirectTo: '/dashboard'
+                redirectTo: '/login'
             });
         }])
 
-        .run(['$rootScope', '$location', 'Auth', 'loginRedirectPath', 'fbutil', '$firebaseObject',
-            function ($rootScope, $location, Auth, loginRedirectPath, fbutil, $firebaseObject) {
+        .run(['$rootScope', '$location', 'Auth', 'loginRedirectPath', 'homeRedirectPath', 'fbutil', '$firebaseObject',
+            function ($rootScope, $location, Auth, loginRedirectPath, homeRedirectPath, fbutil, $firebaseObject) {
                 var unbind;
                 // track status of authentication
                 Auth.$onAuth(function (user) {
                     $rootScope.loggedIn = !!user;
-                    if (!$rootScope.loggedIn) {
+                    if ($rootScope.loggedIn) {
+                       $rootScope.profile = $firebaseObject(fbutil.ref('users', user.uid));
+                       $location.path(homeRedirectPath);
+                    }
+                    else {
                         $location.path(loginRedirectPath);
                     }
 

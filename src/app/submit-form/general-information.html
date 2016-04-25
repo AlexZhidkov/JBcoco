@@ -1,0 +1,43 @@
+<md-content ng-cloak class="md-inline-form">
+    <div flex-gt-md="50" layout="column" layout-padding layout-align="top left">
+        <img ng-src="{{vm.profileImageURL}}" class="md-avatar" alt="">
+        <div>
+            <form name="submitForm">
+                <md-input-container class="md-block">
+                    <label>Name</label>
+                    <input ng-model="vm.name">
+                </md-input-container>
+                <md-datepicker ng-model="vm.dateOfBirth" md-placeholder="Date of Birth">
+                </md-datepicker>
+                <md-input-container class="md-block">
+                    <label>Place of Birth</label>
+                    <input ng-model="vm.placeOfBirth">
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Country of Birth</label>
+                    <input ng-model="vm.countryOfBirth">
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Address</label>
+                    <input ng-model="vm.address">
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Daytime Telephone Number</label>
+                    <input ng-model="vm.daytimeTelephoneNumber">
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Mobile Telephone Number</label>
+                    <input ng-model="vm.mobileTelephoneNumber">
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>E-mail Address</label>
+                    <input ng-model="vm.email" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Job Title</label>
+                    <input ng-model="vm.job">
+                </md-input-container>
+            </form>
+        </div>
+    </div>
+</md-content>
