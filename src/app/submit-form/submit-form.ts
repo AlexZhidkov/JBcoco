@@ -11,14 +11,20 @@
     function SubmitForm(Auth, $location, fbutil, user, logger) {
         var vm = this;
         vm.user = user;
-        vm.name = user[user.provider].displayName;
-        vm.profileImageURL = user[user.provider].profileImageURL
+        vm.generalInformation = getGeneralInformation(user);
         vm.submit = submit;
 
+        function getGeneralInformation(user:any) {
+            return {
+                name: user[user.provider].displayName,
+                profileImageURL: user[user.provider].profileImageURL
+            }
+        }
+        
         function submit() {
             fbutil.ref('forms').push({
                 'clientId': user.uid,
-                'name': vm.name
+                'name': vm.generalInformation.name
              }, function(error) {
                 if (error) {
                     logger.error('Form submit failed', error, 'Error');
