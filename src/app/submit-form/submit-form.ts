@@ -13,8 +13,7 @@
         vm.user = user;
         vm.generalInformation = getGeneralInformation(user);
         vm.submit = submit;
-    }
-    
+
         function getGeneralInformation(user:any) {
             return {
                 name: user[user.provider].displayName,
