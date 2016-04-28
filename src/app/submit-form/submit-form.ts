@@ -24,6 +24,7 @@
         function submit() {
             fbutil.ref('forms').push({
                 'clientId': user.uid,
+                'profileImageURL': vm.generalInformation.profileImageURL,
                 'name': vm.generalInformation.name,
                 'dateOfBirth': vm.generalInformation.dateOfBirth,
                 'placeOfBirth': vm.generalInformation.placeOfBirth,
