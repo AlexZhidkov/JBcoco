@@ -25,12 +25,6 @@
             fbutil.ref('forms').push({
                 'clientId': user.uid,
                 'name': vm.generalInformation.name
-                'dateOfBirth': vm.generalInformation.dateOfBirth
-                'placeOfBirth': vm.generalInformation.placeOfBirth
-                'countryOfBirth': vm.generalInformation.countryOfBirth
-                'daytimeTelephoneNumber': vm.generalInformation.daytimeTelephoneNumber
-                'mobileTelephoneNumber': vm.generalInformation.mobileTelephoneNumber
-                'email': vm.generalInformation.email
              }, function(error) {
                 if (error) {
                     logger.error('Form submit failed', error, 'Error');
