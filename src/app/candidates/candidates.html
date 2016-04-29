@@ -4,8 +4,8 @@
           <div class="md-list-item-text" layout="column">
             <h3>{{ "Name: ".concat(vm.forms[$index].name) }}</h3>
             <h4>{{ "ClientId: ".concat(vm.forms[$index].clientId) }}</h4>
-          </div>
+            <md-button class="md-raised md-secondary md-warn md-hue-2" ng-click="deleteItem()($index)">Delete</md-button>
+           </div>
         </md-list-item>
        </md-list flex> 
    <md-content>
-</div>
