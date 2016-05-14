@@ -3,7 +3,7 @@
     <md-list-item class="md-3-line" ng-repeat="item in vm.forms">
       <div class="md-list-item-text" layout="column">
         <h3>Name: {{item.name}}</h3>
-        <h4>ClientId: {{item.clientId}}</h4>
+        <h4>Date submitted: {{item.dateSubmitted | date : 'dd/MM/yy' }}</h4>
       </div>
     </md-list-item>
   </md-list>

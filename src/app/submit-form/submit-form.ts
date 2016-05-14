@@ -22,7 +22,9 @@
         }
         
         function submit() {
+                        
             fbutil.ref('forms').push({
+                'dateSubmitted': Firebase.ServerValue.TIMESTAMP,
                 'clientId': user.uid,
                 'profileImageURL': vm.generalInformation.profileImageURL,
                 'name': vm.generalInformation.name,
