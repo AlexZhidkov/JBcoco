@@ -5,6 +5,9 @@
         <h3>Name: {{item.name}}</h3>
         <h4>Date submitted: {{item.dateSubmitted | date : 'dd/MM/yy' }}</h4>
       </div>
+      <div>
+        <md‐button class="md‐raised md‐secondary md‐warn md‐hue‐2" ng‐click="vm.deleteItem($index)">Delete</md‐button>
+      </div>  
     </md-list-item>
   </md-list>
 </md-content>
