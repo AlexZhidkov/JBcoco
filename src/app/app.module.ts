@@ -27,6 +27,7 @@
         'app.login',
         'app.candidates',
         'app.submitFormGeneralInformation',
+        'app.submitFormIdentificationDetails',
         'app.submitForm'
     ])
 
