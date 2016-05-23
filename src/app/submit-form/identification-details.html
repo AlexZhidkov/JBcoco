@@ -1,0 +1,13 @@
+<md-content ng-cloak class="md-inline-form">
+    <div flex-gt-md="50" layout="column" layout-padding layout-align="top left">
+        <img ng-src="{{vm.informationDetails.profileImageURL}}" class="md-avatar" alt="" width="150">
+        <div>
+            <form name="submitForm">
+                <md-input-container class="md-block">
+                    <label>Test</label>
+                    <input ng-model="vm.informationDetails.test">
+                </md-input-container>
+            </form>
+        </div>
+    </div>
+</md-content>
